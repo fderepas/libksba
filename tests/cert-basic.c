@@ -27,7 +27,7 @@
 #define _KSBA_VISIBILITY_DEFAULT /*  */
 #include "../src/keyinfo.h"
 
-#include "oidtranstbl.h"
+//#include "oidtranstbl.h"
 #include "t-common.h"
 
 #ifdef __MINGW32CE__
@@ -85,12 +85,6 @@ print_names (int indent, ksba_name_t name)
 static const char *
 get_oid_desc (const char *oid)
 {
-  int i;
-
-  if (oid)
-    for (i=0; oidtranstbl[i].oid; i++)
-      if (!strcmp (oidtranstbl[i].oid, oid))
-        return oidtranstbl[i].desc;
   return NULL;
 }
 
